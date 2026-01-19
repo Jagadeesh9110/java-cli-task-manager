@@ -7,7 +7,7 @@ A command-line utility built in Java to manage tasks efficiently while preparing
 While preparing for Data Structures & Algorithms (DSA), internships, and daily development work, I needed a quick and distraction-free way to manage tasks without relying on GUI applications or external tools.
 
 Existing solutions were either too heavy or required switching contexts.
-This project solves that problem by providing a lightweight CLI-based task manager that works entirely from the terminal.
+This project solves that problem by providing a lightweight, generic CLI-based task manager that works entirely from the terminal and can be used for DSA preparation, internship tasks, or daily development work.
 
 ## Features
 
@@ -17,6 +17,19 @@ This project solves that problem by providing a lightweight CLI-based task manag
 - Delete a task by ID
 - Persistent storage using a local file (tasks are retained across runs)
 - Clear error handling for invalid commands or inputs
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[User runs CLI command] --> B[TaskCLI]
+    B --> C{Parse arguments}
+    C --> D[TaskManager]
+    D --> E[Task List in Memory]
+    E --> F[Task + TaskStatus]
+    D <--> G[tasks.txt]
+    D --> H[Print result to terminal]
+```
 
 ## How to Run the Program
 
