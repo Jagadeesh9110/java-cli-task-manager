@@ -1,0 +1,9 @@
+# Compiled Java class files
+*.class
+
+# IDE files (optional but good practice)
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
