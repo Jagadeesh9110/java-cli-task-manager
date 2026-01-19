@@ -46,7 +46,7 @@ public class TaskManager {
     // Add a new task
     public void addTask(String description) {
         int id = tasks.size() + 1;
-        Task task = new Task(id, description, "PENDING");
+        Task task = new Task(id, description, TaskStatus.PENDING);
         tasks.add(task);
         saveTasks();
         System.out.println("Task added successfully.");

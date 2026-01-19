@@ -2,9 +2,10 @@ public class Task {
 
     private int id;
     private String description;
-    private String status; // PENDING or DONE
+    private TaskStatus status;
+    // PENDING or DONE
 
-    public Task(int id, String description, String status) {
+    public Task(int id, String description, TaskStatus status) {
         this.id = id;
         this.description = description;
         this.status = status;
@@ -18,12 +19,12 @@ public class Task {
         return description;
     }
 
-    public String getStatus() {
+    public TaskStatus getStatus() {
         return status;
     }
 
     public void markDone() {
-        this.status = "DONE";
+        this.status = TaskStatus.COMPLETED;
     }
 
     @Override
@@ -41,7 +42,7 @@ public class Task {
         String[] parts = line.split("\\|");
         int id = Integer.parseInt(parts[0]);
         String description = parts[1];
-        String status = parts[2];
+        TaskStatus status = TaskStatus.valueOf(parts[2]);
         return new Task(id, description, status);
     }
 }
