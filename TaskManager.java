@@ -101,8 +101,9 @@ public class TaskManager {
     // Reassign IDs after deletion
     private void reassignIds() {
         int id = 1;
-        for (Task task : tasks) {
-            task = new Task(id++, task.getDescription(), task.getStatus());
+        for (int i = 0; i < tasks.size(); i++) {
+            Task old = tasks.get(i);
+            tasks.set(i, new Task(id++, old.getDescription(), old.getStatus()));
         }
     }
 }
