@@ -1,5 +1,8 @@
 # Java CLI Task Manager
 
+ **Demo Video (Unlisted):**  
+https://youtu.be/CCZLopkmbzM
+
 A command-line utility built in Java to manage tasks efficiently while preparing for DSA and internship work.
 
 ## Problem Statement
@@ -115,7 +118,8 @@ A short demo video (3–5 minutes) demonstrates:
 - Adding, listing, completing, and deleting tasks
 - Explanation of design choices
 
-*(Demo link provided in submission)*
+**Demo Video (Unlisted):**  
+https://youtu.be/CCZLopkmbzM
 
 ## Author
 
